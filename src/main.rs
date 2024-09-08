@@ -8,7 +8,7 @@ use std::collections::HashMap;
 use std::io;
 fn process_transactions(transactions: Vec<Transaction>) -> HashMap<u16, Account> {
     let mut accounts: HashMap<u16, Account> = HashMap::new();
-    let mut disputed_transactions: HashMap<u32, (u16, f64)> = HashMap::new(); // tx -> (client, amount)
+    let mut disputed_transactions: HashMap<u32, (u16, f32)> = HashMap::new(); // tx -> (client, amount)
 
     for transaction in transactions {
         let account = accounts.entry(transaction.client).or_insert(Account {

@@ -1,5 +1,4 @@
-use serde::{Deserialize, Serialize};
-use std::collections::HashMap;
+use serde::Deserialize;
 
 #[derive(Debug, Deserialize)]
 pub struct Transaction {
@@ -7,5 +6,5 @@ pub struct Transaction {
     pub tx_type: String,
     pub client: u16,
     pub tx: u32,
-    pub amount: Option<f64>,
+    pub amount: Option<f32>,
 }
